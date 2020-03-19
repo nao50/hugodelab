@@ -1,0 +1,32 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<!-- top section -->
+<section class="hero is-medium top-section">
+  <div class="hero-body">
+    <div class="container">
+      
+      <div class="columns is-mobile is-multiline is-centered">
+
+          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-fullhd">
+            <h1 class="title intro-title top-section__title">{{ .Site.Params.Title }}</h1>
+            {{ with .Site.Params.Subtitle }}
+              <p class="subtitle has-text-centered top-section__subtitle">{{ . }}</p>
+            {{ end }}
+          </div>
+
+          <div class="column is-12-mobile is-12-tablet is-8-desktop is-8-fullhd">
+            <p class="control has-icons-left">
+              <input class="input is-rounded is-large is-primary" type="text" placeholder="Search labs...">
+              <span class="icon is-large is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

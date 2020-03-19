@@ -1,0 +1,13 @@
+title = "hugodelab"
+languageCode = "ja"
+defaultContentLanguage = "ja"
+baseURL = "http://localhost:1313/"
+enableGitInfo = true
+hasCJKLanguage = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
+enableRobotsTXT = true
+googleAnalytics = "UA-XXXXXXXXX-X"
+
+[params]
+  title = "Hugo de Lab"

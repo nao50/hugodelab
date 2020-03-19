@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Site.Title | safeHTML }}">
+  <link rel="canonical" href='{{ .Permalink }}'>
+  <title>{{ if not (eq .Title .Site.Title) }}{{ .Title }} &ndash;{{ end }} {{ .Site.Title }}</title>
+
+  <!-- font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
+
+  <!-- scss -->
+  {{ $styles := resources.Get "_index.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+  <!-- js -->
+  <script src="{{ .Site.BaseURL }}js/dist/main.js"></script>
+
+</head>
+<body>

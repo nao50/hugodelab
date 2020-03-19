@@ -1,0 +1,37 @@
+{
+  "name": "hugodelab",
+  "version": "0.0.1",
+  "description": "codelab like pages made with hugo",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p start:**",
+    "start:hugo": "hugo server -t hugodelab -w --environment dev",
+    "start:hugoDev": "hugo server -t hugodelab -w -F -D --environment dev -p 1314",
+    "start:webpack": "webpack --watch",
+    "startDev": "run-p startDev:**",
+    "startDev:hugo": "hugo server -t hugodelab -w -F -D --environment dev",
+    "startDev:webpack": "webpack --watch",
+    "build": "npm run build:webpack && npm run build:hugo",
+    "build:webpack": "webpack",
+    "build:hugo": "hugo -t hugodelab --minify --environment production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nao50/hugodelab.git"
+  },
+  "keywords": ["hugo", "typescript", "bulma", "codelab"],
+  "author": "nao50",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nao50/hugodelab/issues"
+  },
+  "homepage": "https://github.com/nao50/hugodelab#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
