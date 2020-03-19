@@ -1,3 +1,9 @@
 // bulma
 @import "./bulma";
+@import "./header";
 @import "./top";
+@import "./colab";
+
+body {
+    background: #eceff1;
+}

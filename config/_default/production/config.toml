@@ -10,4 +10,9 @@ enableRobotsTXT = true
 googleAnalytics = "UA-XXXXXXXXX-X"
 
 [params]
+  logo = "https://bulma.io/images/bulma-logo.png"
   title = "Hugo de Lab"
+
+[taxonomies]
+  category = "categories"
+  level = "level"

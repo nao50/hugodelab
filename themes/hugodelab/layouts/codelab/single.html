@@ -1,0 +1,53 @@
+{{ partial "head.html" . }}
+{{ partial "codelab-header.html" . }}
+
+<section class="container codelab-section">
+  <article class="columns is-mobile is-variable is-6">
+
+    <aside class="column codelab-stepnav is-12-mobile is-12-tablet is-4-desktop is-4-fullhd">
+      <!-- <nav class="codelab-stepnav-inner">
+        <div class="content">
+
+          <div class="card codelab-stepnav-card card-equal-height">
+            <div class="card-content">
+              vsdvsvsd
+            </div>
+          </div>
+
+          <div class="card codelab-stepnav-card card-equal-height">
+            <div class="card-content">
+              KMBFLKFKB
+            </div>
+          </div>
+
+          <div class="card codelab-stepnav-card card-equal-height">
+            <div class="card-content">
+              KMBFLKFKB
+            </div>
+          </div>
+
+        </div>
+      </nav> -->
+    </aside>
+
+
+    <article class="column codelab-article is-12-mobile is-12-tablet is-three-quarters-desktop is-three-quarters-fullhd">
+      <div class="content">
+        <div class="card codelab-article-card card-equal-height">
+          <div id="codelab-content" class="card-content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- <aside class="controls">
+      <button class="button codelab-back-button">Normal</button>
+      <button class="button is-primary codelab-next-button">Normal</button>
+    </aside> -->
+
+  </article>
+</section>
+
+
+{{ partial "codelab-footer.html" . }}

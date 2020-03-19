@@ -15,16 +15,99 @@
             {{ end }}
           </div>
 
-          <div class="column is-12-mobile is-12-tablet is-8-desktop is-8-fullhd">
-            <p class="control has-icons-left">
-              <input class="input is-rounded is-large is-primary" type="text" placeholder="Search labs...">
-              <span class="icon is-large is-left">
-                <i class="fas fa-search"></i>
-              </span>
-            </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- codelab section -->
+<section class="section codelab-list-section" id="codelab">
+  <div class="codelab-title">Codelab</div>
+  <p class="codelab-subtitle">Check the details of codelab.</p>
+
+
+  <div class="container codelab-filters">
+    <div class="columns is-mobile is-multiline">
+
+      <div class="column is-6-mobile is-6-tablet is-3-desktop is-3-fullhd">
+        <div class="select is-rounded is-primary">
+          <select onChange="filterByCategory(this.value)">
+              <option value="" style="display: none;">Filter by category</option>
+              <option value="" >All</option>
+            {{ range $cat, $num := where .Site.Taxonomies.categories "Section" "codelab" }}
+              <option>{{ $cat }}</span>
+            {{ end }}
+          </select>
+        </div>
+      </div>
+      
+
+      <div class="column is-6-mobile is-6-tablet is-3-desktop is-3-fullhd">
+        <div class="select is-rounded is-primary">
+          <select onChange="filterByLevel(this.value)">
+            <option value="" style="display: none;">Filter by Level</option>
+            <option value="" >All</option>
+            {{ range $lev, $num := where .Site.Taxonomies.level "Section" "codelab" }}
+              <option>{{ $lev }}</span>
+            {{ end }}
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="columns is-mobile is-multiline">
+
+      {{ range where .Site.Pages "Section" "codelab" }}
+        {{ range first 10 (.Pages.ByWeight) }}
+
+          {{ $l := .Params.level }}
+          {{ with $c := .Params.categories }}
+          <div class="column is-12-mobile is-6-tablet is-4-desktop is-4-fullhd cat-filter lev-filter" cat="{{ delimit $c "," }}" lev="{{ $l }}">
+          {{end}}
+            <a href="{{ .Permalink }}">
+              <div class="card card-equal-height">
+                <div class="card-content">
+
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-48x48">
+                          {{ with .Params.thumbnail }}
+                            <img src="{{ . }}" alt="codelab icon">
+                          {{end}}
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <p class="subtitle is-6">{{ .Title }}</p>
+                      </div>
+                    </div>
+
+                  <div class="codelab-card-duration">
+                    <span>Level: {{ .Params.level }}</span>
+                    <span>Updated: {{ .PublishDate.Format "2006/01/02" }}</span>
+                  </div>
+
+                  <div class="codelab-card-footer">
+                    {{ range first 5 (.Param "categories") }}
+                      <span class="tag is-primary is-light is-rounded">{{.}}</span>
+                    {{ end }}
+                  </div>
+
+                </div>
+              </div>
+            </a>
           </div>
 
-      </div>
+        {{ end }}
+      {{ end }}
+
+
     </div>
   </div>
 </section>

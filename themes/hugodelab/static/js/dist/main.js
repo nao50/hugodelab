@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./themes/hugodelab/static/js/codelab.ts":
+/*!***********************************************!*\
+  !*** ./themes/hugodelab/static/js/codelab.ts ***!
+  \***********************************************/
+/*! exports provided: codelab */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"codelab\", function() { return codelab; });\nfunction codelab() {\n    document.addEventListener('DOMContentLoaded', function () {\n        // const urlHash = location.hash.slice(1);\n        // const h1List = document.getElementsByTagName('h1');\n        // for(let i = 0; i <= h1List.length - 1; i++) {\n        //   h1List[i].classList.add('codelab-step');\n        //   h1List[i].setAttribute(\"id\", String(i));\n        //   h1List[i].removeAttribute(\"selected\");\n        //   if(!urlHash){\n        //     h1List[0].setAttribute(\"selected\", \"\");\n        //   }\n        //   if(urlHash === String(i)) {\n        //     h1List[i].setAttribute(\"selected\", \"\");\n        //   }\n        // }\n        var urlHash = location.hash.slice(1);\n        var h1List = document.getElementsByTagName('h1');\n        var codelabContent = document.getElementById('codelab-content');\n        for (var i = 0; i <= codelabContent.childNodes.length - 1; i++) {\n            var content = codelabContent.childNodes[i];\n            console.log('content:', content);\n        }\n        for (var i = 0; i <= h1List.length - 1; i++) {\n            var div = document.createElement('div');\n            div.classList.add('code-name');\n            // div.appendChild(h1List[i].children);\n        }\n        //   for(let i = 0; i <= list.length - 1; i++) {\n        //     let pre = list[i].firstElementChild;\n        //     let code = list[i].firstElementChild.firstElementChild;\n        //     let codeName =  code ? code.className.split(\":\")[1] : null;\n        //     if(codeName) {\n        //       let div = document.createElement('div');\n        //       div.textContent = codeName;\n        //       div.classList.add('code-name');\n        //       pre.parentNode.insertBefore(div, pre);\n        //     }\n        //   }\n    });\n}\n\n\n//# sourceURL=webpack:///./themes/hugodelab/static/js/codelab.ts?");
+
+/***/ }),
+
 /***/ "./themes/hugodelab/static/js/index.ts":
 /*!*********************************************!*\
   !*** ./themes/hugodelab/static/js/index.ts ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./themes/hugodelab/static/js/index.ts?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _codelab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./codelab */ \"./themes/hugodelab/static/js/codelab.ts\");\n\nObject(_codelab__WEBPACK_IMPORTED_MODULE_0__[\"codelab\"])();\n\n\n//# sourceURL=webpack:///./themes/hugodelab/static/js/index.ts?");
 
 /***/ })
 
