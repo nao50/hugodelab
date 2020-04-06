@@ -20,7 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/nao50/hugodelab.git"
   },
-  "keywords": ["hugo", "typescript", "bulma", "codelab"],
+  "keywords": [
+    "hugo",
+    "typescript",
+    "bulma",
+    "codelab"
+  ],
   "author": "nao50",
   "license": "MIT",
   "bugs": {
